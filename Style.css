@@ -21,7 +21,7 @@ ul {
     list-style-type: none;
 }
 iframe {
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     
 }
