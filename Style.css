@@ -45,14 +45,13 @@ ul {
     z-index: 10;
 }
 .footer {
-    background-color: whitesmoke;
-    height:200px;
+    background-color: lightgray;
     display: flex;
     bottom: 0;
     width: 100% ;
     flex-direction: column;
     align-content: space-between;
-    position: relative;
+    position: static;
 
 }
 .name {
@@ -74,6 +73,14 @@ ul {
 .txt-txt {
     margin-left: 30px;
     margin-right: 30px;
+}
+.row-con {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content : center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 a:link {
     color: initial;
