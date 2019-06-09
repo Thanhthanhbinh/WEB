@@ -40,7 +40,7 @@ iframe {
 }
 .navigation {
     background-color: whitesmoke;
-    height:85px;
+    height:70px;
     display: flex;
     position: fixed;
     top: 0px;
