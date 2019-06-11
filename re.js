@@ -46,3 +46,19 @@ function confirm(){
   alert("NO INFROMATION");
 };
 };
+function change(){
+  btn=document.getElementById('review');
+  btn_r=document.getElementById('replace_review');
+  btn_r1=document.getElementById('replace_review1');
+  if (btn==btn_r){
+    bb='<i class="fas fa-chevron-down"></i> REVIEW <i class="fas fa-chevron-down"></i>';
+    btn.innerHTML=bb;
+    alert(btn-btn_r);
+  }
+  if (btn==btn_r1) {
+    bb='<i class="fas fa-chevron-up"></i> REVIEW <i class="fas fa-chevron-up"></i>';
+    btn.innerHTML=bb;
+    alert(btn-btn_r1);
+  };
+  
+};
