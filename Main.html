@@ -17,8 +17,7 @@
           var inp1="";
           var bb="";
           var btn=document.getElementById('review');
-          var btn_r=document.getElementById('replace_review');
-          var btn_r1=document.getElementById('replace_review1');
+          var times=0;
         </script>
     </head>
     <body>
@@ -86,57 +85,57 @@
         </div>
               <!--NGĂN CÁCH CHO THOÁNG-->
           <div class="container">
-              <p style="text-align: center" class="Head_img">!LOOK!</p>
+              <p style="text-align: center; font-size: 100px;" class="Head_img">!LOOK!</p>
           </div>
             <!--DISPLAY ẢNH-->
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-interval="2000">
-                            <img src=" https://vignette.wikia.nocookie.net/xmenmovies/images/d/db/XMA_Earth_3.jpeg/revision/latest?cb=20171125132938" class="d-block w-100" alt="...">
+                            <img src=" https://vignette.wikia.nocookie.net/xmenmovies/images/d/db/XMA_Earth_3.jpeg/revision/latest?cb=20171125132938" class="d-block w-100" style="border-radius: 50%;" alt="...">
                             <div class="flex-container">
-                                    <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=PQDqXPy4NoWpoAT3_qegBw&q=earth&oq=earth&gs_l=psy-ab.3..0i67l5j0i203l2j0l3.177677.180748..181289...3.0..5.462.2083.0j10j4-2......0....1..gws-wiz.....6..0i71j35i39j0i131j38j0i10i30j0i5i10i30.ISePSx3LDJk">EARTH</a>
+                                    <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=PQDqXPy4NoWpoAT3_qegBw&q=earth&oq=earth&gs_l=psy-ab.3..0i67l5j0i203l2j0l3.177677.180748..181289...3.0..5.462.2083.0j10j4-2......0....1..gws-wiz.....6..0i71j35i39j0i131j38j0i10i30j0i5i10i30.ISePSx3LDJk">EARTH</a>
                             </div>
                       </div>
                       <div class="carousel-item" data-interval="2000">
-                            <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/169/wide_fullhd_Red_square_Moscow_cityscape__8309148721_.jpg" class="d-block w-100" alt="...">
+                            <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/169/wide_fullhd_Red_square_Moscow_cityscape__8309148721_.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                             <div class="flex-container">
-                                    <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=YP_pXOOUG5LM-Qb4wbrwBQ&q=russia&oq=RUS&gs_l=psy-ab.1.0.35i39j0i67l9.216771.217411..219358...2.0..1.452.953.0j4j4-1......0....1..gws-wiz.......0i71j0i131j0j0i20i263.AegZ9QPx4k0">RUSSIA</a>
+                                    <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=YP_pXOOUG5LM-Qb4wbrwBQ&q=russia&oq=RUS&gs_l=psy-ab.1.0.35i39j0i67l9.216771.217411..219358...2.0..1.452.953.0j4j4-1......0....1..gws-wiz.......0i71j0i131j0j0i20i263.AegZ9QPx4k0">RUSSIA</a>
                             </div>
                       </div>
                       <div class="carousel-item" data-interval="2000">
-                            <img src="https://cdn.tourradar.com/s3/tour/original/139971_da553565.jpg" class="d-block w-100" alt="...">
+                            <img src="https://cdn.tourradar.com/s3/tour/original/139971_da553565.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                             <div class="flex-container">
-                                  <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=V__pXK6XB8P4hwPutafQDw&q=england&oq=england&gs_l=psy-ab.3..0i67i70i253j0i67j0i203j0i131j0j0i131j0l4.1376.6180..7322...1.0..1.426.1421.0j5j0j1j1......0....1..gws-wiz.....6..0i71j35i39j0i131i67.QHO-6wMbuLI">ENGLAND</a>
+                                  <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=V__pXK6XB8P4hwPutafQDw&q=england&oq=england&gs_l=psy-ab.3..0i67i70i253j0i67j0i203j0i131j0j0i131j0l4.1376.6180..7322...1.0..1.426.1421.0j5j0j1j1......0....1..gws-wiz.....6..0i71j35i39j0i131i67.QHO-6wMbuLI">ENGLAND</a>
                             </div>
                       </div>
                       <div class="carousel-item" data-interval="2000">
-                            <img src="https://newwebsiteblobs.blob.core.windows.net/destinations/New_York/Main_Slider/TOP4_Statue%20of%20Liberty%20and%20the%20New%20York%20City%20Skyline_Sean%20Pavone_shutterstock.com.jpg" class="d-block w-100" alt="...">
+                            <img src="https://newwebsiteblobs.blob.core.windows.net/destinations/New_York/Main_Slider/TOP4_Statue%20of%20Liberty%20and%20the%20New%20York%20City%20Skyline_Sean%20Pavone_shutterstock.com.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                             <div class="flex-container">
-                                    <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=9ADqXJjaOIn6-Qb1ia_YBQ&q=new+york&oq=new+york&gs_l=psy-ab.3..0i67l4j0j0i131j0l4.101015.104124..104608...3.0..1.307.1739.0j7j1j2......0....1..gws-wiz.....6..0i71j35i39j35i39i19j0i131i67j0i10i203j0i22i30j38.g2zeh1GQDuk">NEW YORK</a>
+                                    <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?biw=1366&bih=657&ei=9ADqXJjaOIn6-Qb1ia_YBQ&q=new+york&oq=new+york&gs_l=psy-ab.3..0i67l4j0j0i131j0l4.101015.104124..104608...3.0..1.307.1739.0j7j1j2......0....1..gws-wiz.....6..0i71j35i39j35i39i19j0i131i67j0i10i203j0i22i30j38.g2zeh1GQDuk">NEW YORK</a>
                             </div>
                       </div>
                       <div class="carousel-item" data-interval="2000">
-                          <img src="https://blog.dutyfreelist.com/wp-content/uploads/2018/10/France_1920_800_homepage.jpg" class="d-block w-100" alt="...">
+                          <img src="https://blog.dutyfreelist.com/wp-content/uploads/2018/10/France_1920_800_homepage.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                           <div class="flex-container">
-                                  <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?q=pARIS&oq=Paris&aqs=chrome.0.69i59j0l5.1434j0j9&sourceid=chrome&ie=UTF-8">PARIS</a>
+                                  <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?q=pARIS&oq=Paris&aqs=chrome.0.69i59j0l5.1434j0j9&sourceid=chrome&ie=UTF-8">PARIS</a>
                           </div>
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="https://publicholidays.us/wp-content/uploads/2014/01/US_Texas_1920_800_2.jpg" class="d-block w-100" alt="...">
+                        <img src="https://publicholidays.us/wp-content/uploads/2014/01/US_Texas_1920_800_2.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                         <div class="flex-container">
-                          <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?ei=F43yXNW9EsLqwQPe3Y2ACg&q=Texas&oq=Texas&gs_l=psy-ab.3..0i67j0i131j0l2j0i131j0j0i203l2j0l2.12274.15402..15740...1.0..3.249.1437.0j8j1......0....1..gws-wiz.....6..0i71j35i39j0i131i67j0i131i20i263.3PsHpgK4exA">TEXAS</a>
+                          <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?ei=F43yXNW9EsLqwQPe3Y2ACg&q=Texas&oq=Texas&gs_l=psy-ab.3..0i67j0i131j0l2j0i131j0j0i203l2j0l2.12274.15402..15740...1.0..3.249.1437.0j8j1......0....1..gws-wiz.....6..0i71j35i39j0i131i67j0i131i20i263.3PsHpgK4exA">TEXAS</a>
                         </div>
                   </div>
                   <div class="carousel-item" data-interval="2000">
-                      <img src="http://neotokyo2099.com/wp-content/uploads/2019/05/cropped-harajuku.jpg" class="d-block w-100" alt="...">
+                      <img src="http://neotokyo2099.com/wp-content/uploads/2019/05/cropped-harajuku.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                       <div class="flex-container">
-                              <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?q=Tokyo&oq=to&aqs=chrome.0.69i59j69i61l3j69i57j69i59.1379j0j7&sourceid=chrome&ie=UTF-8">TOKYO</a>
+                              <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?q=Tokyo&oq=to&aqs=chrome.0.69i59j69i61l3j69i57j69i59.1379j0j7&sourceid=chrome&ie=UTF-8">TOKYO</a>
                       </div>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="https://cdn.tourradar.com/s3/tour/original/128259_11b6005a.jpg" class="d-block w-100" alt="...">
+                    <img src="https://cdn.tourradar.com/s3/tour/original/128259_11b6005a.jpg" class="d-block w-100" style="border-radius: 50%;" alt="...">
                     <div class="flex-container">
-                            <a role="button" class="btn btn-outline-dark btn-block" href="https://www.google.com/search?q=Hanoi&oq=hanoi&aqs=chrome.0.69i59j69i61l3j0l2.1339j0j9&sourceid=chrome&ie=UTF-8">Hanoi</a>
+                            <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?q=Hanoi&oq=hanoi&aqs=chrome.0.69i59j69i61l3j0l2.1339j0j9&sourceid=chrome&ie=UTF-8">Hanoi</a>
                     </div>
               </div>
                     </div>
@@ -194,9 +193,9 @@
         <p class="Head_img" style="text-align: center">!RATE US!</p>
         <input class="form-control form-control-lg" type="text" placeholder="Name" id="Name" onchange="add1()">
         <div class="btn-group flex-container" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-outline-success" onclick="good()" id="Good"><i class="fas fa-thumbs-up"></i></button>
-            <button type="button" class="btn btn-outline-warning" onclick="ok()" id="OK" >OK</button>
-            <button type="button" class="btn btn-outline-danger" onclick="bad()" id="Bad"><i class="fas fa-thumbs-down"></i></button>
+            <button type="radio" class="btn btn-outline-success" onclick="good()" id="Good"><i class="fas fa-thumbs-up"></i></button>
+            <button type="radio" class="btn btn-outline-warning" onclick="ok()" id="OK" >OK</button>
+            <button type="radio" class="btn btn-outline-danger" onclick="bad()" id="Bad"><i class="fas fa-thumbs-down"></i></button>
         </div>
         <div class="form-group" >
 <textarea class="form-control" onchange="add2()" id="exampleFormControlTextarea1" type="text" placeholder="Comment"></textarea>
@@ -209,8 +208,6 @@
 </div>
     </div>
 <p class="Head_img" style="text-align: center; display:none;" id="block-show">!THANK YOU!</p>
-<p style="display:none;" id="replace_review"><i class="fas fa-chevron-up"></i> REVIEW <i class="fas fa-chevron-up"></i></p>
-<p style="display:none;" id="replace_review1"><i class="fas fa-chevron-down"></i> REVIEW <i class="fas fa-chevron-down"></i></p>
 
     <!--JS-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

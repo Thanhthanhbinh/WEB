@@ -9,24 +9,19 @@ function add2(){
 };
 function good(){
   var aa=document.getElementById("Good");
-  if(once==0){
-    rate="Good";
-    once=1;
-  };
+  rate="Good";
+  once=1;
 };
 function bad(){
   var aa=document.getElementById("Bad");
-  if(once==0){
-    rate="Bad";
-    once=1;
-};
+  rate="Bad";
+  once=1;
+
 };
 function ok(){
   var aa=document.getElementById("OK");
-  if(once==0){
-    rate="OK";
-    once=1;
-  };
+  rate="OK";
+  once=1;
 }; 
 function confirm(){
   if(test==3 && once==1){
@@ -48,17 +43,13 @@ function confirm(){
 };
 function change(){
   btn=document.getElementById('review');
-  btn_r=document.getElementById('replace_review');
-  btn_r1=document.getElementById('replace_review1');
-  if (btn==btn_r){
-    bb='<i class="fas fa-chevron-down"></i> REVIEW <i class="fas fa-chevron-down"></i>';
-    btn.innerHTML=bb;
-    alert(btn-btn_r);
+  if (times%2==0){
+    btn.innerHTML='<i class="fas fa-chevron-up"></i> REVIEW <i class="fas fa-chevron-up"></i>';
+    times=times+1;
   }
-  if (btn==btn_r1) {
-    bb='<i class="fas fa-chevron-up"></i> REVIEW <i class="fas fa-chevron-up"></i>';
-    btn.innerHTML=bb;
-    alert(btn-btn_r1);
-  };
-  
+  else {
+    btn.innerHTML='<i class="fas fa-chevron-down"></i> REVIEW <i class="fas fa-chevron-down"></i>';
+    times=times+1;
+
+  }
 };
