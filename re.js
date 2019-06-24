@@ -8,18 +8,15 @@ function add2(){
   test=test+1;
 };
 function good(){
-  var aa=document.getElementById("Good");
   rate="Good";
   once=1;
 };
 function bad(){
-  var aa=document.getElementById("Bad");
   rate="Bad";
   once=1;
 
 };
 function ok(){
-  var aa=document.getElementById("OK");
   rate="OK";
   once=1;
 }; 
@@ -44,12 +41,66 @@ function confirm(){
 function change(){
   btn=document.getElementById('review');
   if (times%2==0){
-    btn.innerHTML='<i class="fas fa-chevron-up"></i> REVIEW <i class="fas fa-chevron-up"></i>';
+    btn.innerHTML='<i class="fas fa-chevron-up"></i>';
     times=times+1;
   }
   else {
-    btn.innerHTML='<i class="fas fa-chevron-down"></i> REVIEW <i class="fas fa-chevron-down"></i>';
+    btn.innerHTML='<i class="fas fa-chevron-down"></i>';
     times=times+1;
-
   }
 };
+function changeG() {
+  var a=document.getElementById('G1');
+  a.style.opacity="1";
+  a.style.transition="opacity 2s";
+  var a=document.getElementById('G2');
+  a.style.opacity="1";
+  a.style.transition="opacity 2s";
+}
+function changeG1() {
+  var a=document.getElementById('G1');
+  a.style.opacity="0";
+  a.style.transition="opacity 2s";
+  var a=document.getElementById('G2');
+  a.style.opacity="0";
+  a.style.transition="opacity 2s";
+}
+function Larrows_h() {
+  var a=document.getElementById('left-a');
+  a.style.opacity="1";
+  a.style.transition="opacity 1s";
+  a.style.marginLeft="30px";
+  a.style.transition="margin-left 1s";
+}
+function Larrows_u() {
+  var a=document.getElementById('left-a');
+  a.style.opacity="0.1";
+  a.style.transition="opacity 1s";
+  a.style.marginLeft="20px";
+  a.style.transition="margin-left 1s";
+}
+function Rarrows_h() {
+  var a=document.getElementById('right-a');
+  a.style.opacity="1";
+  a.style.transition="opacity 1s";
+  a.style.marginRight="30px";
+  a.style.transition="margin-right 1s";
+}
+function Rarrows_u() {
+  var a=document.getElementById('right-a');
+  a.style.opacity="0.1";
+  a.style.transition="opacity 1s";
+  a.style.marginRight="20px";
+  a.style.transition="margin-right 1s";
+}
+function move(){
+  var a=document.getElementById('img3');
+  a.style.left="0";
+  a.style.transition="left 2s";
+}
+function opacityC() {
+  var a=document.getElementById('img');
+  a.style.opacity="0.5";
+  a.style.transition="opacity 2s";
+}
+

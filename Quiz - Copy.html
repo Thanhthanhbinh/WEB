@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="8">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fugaz+One|Grand+Hotel&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <title>Quiz</title>
+        <script src="re.js"></script>
+        <script>
+            var arr=[];
+            var test=0;
+            var once=0;
+            var inp="";
+            var inp1="";
+            var bb="";
+            var btn=document.getElementById('review');
+            var times=0;
+        </script>
+    </head>
+    <body>
+        <!--NAVIGATION BAR-->
+        <div class="navigation" >
+            <div style="float: left;justify-items: center;">
+                <a href="#" style="font-size: 30px;width: initial;" class="container"><i class="fas fa-map-marked-alt fa-1g"></i> TRAVEL</a>
+                <a  class="btn btn-sm btn-light" href="Main.html" role="button" style="margin-bottom:11px;"><i class="fas fa-home"></i> HOME</a>
+                <a class="btn btn-sm btn-light " id="s" href="#" role="button" style="margin-bottom:11px;"><i class="fas fa-file-alt"></i> TAKE QUIZ</a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!--CACH RA CHO THOANG-->
+        <div class="container">
+            <p style="text-align: center; font-size: 90px;" class="Heading">!START! </p>
+        </div>
+        <!--QUIZ-->
+        <div class="quizBox">
+            <header class="Heading" style="font-size: 50px;display:flex;align-content: flex-start; flex-direction:column; margin-left: 5px; display: inline-block;">FIRST QUESTION: <i class="far fa-calendar-check"></i></header>
+            <div class="flex-container">
+                <header class="SHeading" style="margin-left: 30px">How long are you expected to travel?</header>
+            </div>
+            <div class="row-con" style="background-color: whitesmoke;">
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> LONG </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> MEDIUM </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> SHORT </button>
+            </div>
+            <header class="Heading" style="font-size: 50px;display:flex;align-content: flex-start; flex-direction:column; margin-left: 5px;display: inline-block; ">SECOND QUESTION: <i class="fas fa-comment-dollar"></i></header>
+            <div class="flex-container">
+                <header class="SHeading" style="margin-left: 30px">How much are you expected to spend?</header>
+            </div>
+            <div class="row-con" style="background-color: whitesmoke;">
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> VERY MUCH </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> MEDIUM </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> VERY LITTLE </button>
+            </div>
+            <header class="Heading" style="font-size: 50px;display:flex;align-content: flex-start; flex-direction:column; margin-left: 5px;display: inline-block ">THIRD QUESTION: <i class="fas fa-users"></i></header>
+            <div class="flex-container">
+                <header class="SHeading" style="margin-left: 30px">How many people are you expected to travel with?</header>
+            </div>
+            <div class="row-con" style="background-color: whitesmoke;">
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> MANY PALS </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> A FEW </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> ONLY ME </button>
+            </div>
+        </div>
+        <!--CACH RA CHO THOANG-->
+        <div class="container">
+            <p style="text-align: center; font-size: 80px;" class="Heading" style="display:flex; flex-direction: row"><i class="fas fa-eye"></i> ?ANY SPECULATION? <i class="fas fa-eye"></i></p>
+        </div>
+        <!--DISPLAY ẢNH-->
+        <div class="slider" style="display: flex; justify-content:center;">
+            <i class="fas fa-chevron-left fa-2x" onmouseover="Larrows_h()" onmouseout="Larrows_u()" id="left-a" style="align-self: center; margin-left: 20px; opacity: 0.1;"></i>
+            <img id="img" src="https://c.ststat.net/content/EntImg/HomepageModule/-1930530097-300x300.jpg" onmouseover="opacityC()" class="round_img center">
+            <i class="far fa-heart center fa-3x" style="position: absolute; align-self: center"></i>
+            <i class="fas fa-chevron-right right fa-2x" onmouseover="Rarrows_h()" onmouseout="Rarrows_u()" id="right-a" style="align-self: center;margin-right: 20px; opacity: 0.1;"></i>
+            
+        </div>
+    </body>
+    <footer>
+        <!--FOOTER-->
+        <div class="footer" style="left:0; right:0">
+            <div style="align-self: center; margin-top: 5px;">
+                <span class="Heading" style="font-size: 40px">MADE BY :</span>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME1</a>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME2</a>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME2</a>
+            </div>
+            <div class="row-con">
+                <a  class="btn btn-sm btn-outline-info" href="https://www.facebook.com/" role="button"  ><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a  class="btn btn-sm btn-outline-danger" href="https://www.youtube.com/" role="button" style="margin-left: 30px"><i class="fab fa-youtube fa-2x"></i></a>
+                <a  class="btn btn-sm btn-outline-primary" href="https://twitter.com/" role="button" style="margin-left: 30px"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
