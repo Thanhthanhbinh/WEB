@@ -34,6 +34,7 @@ function confirm(){
     rate:rate,
   };
   arr.push(obj);
+  
 }else{
   alert("NO INFROMATION");
 };
@@ -212,5 +213,5 @@ function show_top() {
   }
 }
 function quiz_selection () {
-  
+
 }
