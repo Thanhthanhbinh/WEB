@@ -93,14 +93,86 @@ function Rarrows_u() {
   a.style.marginRight="20px";
   a.style.transition="margin-right 1s";
 }
-function move(){
-  var a=document.getElementById('img3');
-  a.style.left="0";
-  a.style.transition="left 2s";
-}
+//LIKE DESTINATIONS FUNCS
+//hover
 function opacityC() {
-  var a=document.getElementById('img');
-  a.style.opacity="0.5";
-  a.style.transition="opacity 2s";
+  var pic=document.getElementsByClassName('slide');
+  var blank_h=document.getElementById('heart');
+  var black_h=document.getElementById('heart1');
+  for (c=0;c<pic.length;c++){//TURN EVERY PICS VISIBLE OR NOT
+    pic[c].style.opacity="0.5";
+    pic[c].style.transition="opacity 1s";
+  }
+    if (i in time==false) {
+      blank_h.style.display="block";
+      black_h.style.display='none';
+    } else {
+      black_h.style.display="block";
+      blank_h.style.display="none";
 }
+}
+//not hover
+function opacityD() {
+  var pic=document.getElementsByClassName('slide');
+  var blank_h=document.getElementById('heart');
+  var black_h=document.getElementById('heart1');
+  for (c=0;c<pic.length;c++){//APPLIES TO ALL PICS VISIBLE OR NOT
+    pic[c].style.opacity="1";
+    pic[c].style.transition="opacity 1s";
+  }
+  //HIDE BOTH TYPES OF HEART GRAPHICS
+  black_h.style.display="none";
+  blank_h.style.display="none";
+  
+}
+//click on heart
+function changeG1() {
+  var blank_h=document.getElementById('heart');
+  var black_h=document.getElementById('heart1');
+    black_h.style.display="none";
+    blank_h.style.display="block";
+    var index=time.indexOf(i);
+    if (index>-1){
+      time.splice(index,1);
+    }
+    //show blank graphic
+    //remove pic from time array
+} 
+function changeG() {
+  var blank_h=document.getElementById('heart');
+  var black_h=document.getElementById('heart1');
+    blank_h.style.display="none";
+    black_h.style.display="block";
+    var index=time.indexOf(i);
+    if (index==-1){
+    time.push(i);}
 
+    //show black graphic
+    //add pic to time array
+  }
+
+//slide to the right
+function slideR() {
+  var pic=document.getElementsByClassName('slide');
+  if (i<pic.length) {//if the slide was not the last slide
+    pic[i+1].style.display="block";//show next slide
+    pic[i].style.display="none";// hide current slide
+    heart_times=2;//reset heart_times
+    i++;
+  } 
+}
+//slide to the left
+function slideL() {
+  var pic=document.getElementsByClassName('slide');
+  if (i>0) {
+    pic[i-1].style.display="block";//show previous slide
+    pic[i].style.display="none";//hide current slide
+    heart_times=2;//reset heart_times
+    i--;
+  } 
+
+}
+function show_ht() {
+  alert(time);
+  alert(i);
+}

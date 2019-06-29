@@ -128,7 +128,9 @@ iframe {
     width: 100px;
     background-color: aliceblue;
 }
-
+.move-up {
+    z-index: 3;
+}
 a:link {
     color: initial;
     text-decoration: none;
