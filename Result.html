@@ -7,27 +7,72 @@
         <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fugaz+One|Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <title>Resutl</title>
+        <title>Result</title>
+        <script src="re.js"></script>
+        <script>
+            var arr=[];
+            var test=0;
+            var once=0;
+            var inp="";
+            var inp1="";
+            var bb="";
+            var btn=document.getElementById('review');
+            var times=0;
+            var time=[];
+            var i=0;
+            var heart_times=2;
+            var england_r=0;
+            var russia_r=0;
+            var newYork_r=0;
+            var tokyo_r=0;
+            var hanoi_r=0;
+            var france_r=0;
+            var texas_r=0;
+            var ratings=[england_r,russia_r,newYork_r,tokyo_r,hanoi_r,france_r,texas_r];
+            var max=[];
+        </script>
     </head>
     <body>
         <!--NAVIGATION BAR-->
         <div class="navigation" >
-                <div style="float: left">
+            <div style="float: left;justify-items: center;">
                 <a href="#" style="font-size: 30px;width: initial;" class="container"><i class="fas fa-map-marked-alt fa-1g"></i> TRAVEL</a>
-                <a  class="btn btn-sm btn-outline-dark" href="Main.html" role="button" style="margin-bottom:11px;"><i class="fas fa-home"></i> HOME</a>
-                <a class="btn btn-sm btn-outline-dark " href="#" role="button" style="margin-bottom:11px;"><i class="fas fa-file-alt"></i> TAKE QUIZ</a>
-                </div>
+                <a  class="btn btn-sm btn-light" href="index.html" role="button" style="margin-bottom:11px;"><i class="fas fa-home"></i> HOME</a>
+                <a class="btn btn-sm btn-light " id="s" href="Quiz - Copy.html" role="button" style="margin-bottom:11px;"><i class="fas fa-file-alt"></i> TAKE QUIZ</a>
             </div>
+        </div>
         <br>
         <br>
         <br>
+        <div class="flex-container">
+            <button type="radio" class="btn btn-danger" style="margin-left: 30px"> RESULT </button>
+        </div>
 
-    <!--TEST CONTENT-->
-    <iframe src="England.html" style="width: 100%;border: none;height: 1000px;overflow: auto;"">a</iframe>
     <!--JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
-    
+    <footer>
+        <!--FOOTER-->
+        <div class="footer" style="left:0; right:0">
+            <div style="align-self: center; margin-top: 5px;">
+                <span class="Heading" style="font-size: 40px">MADE BY :</span>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME1</a>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME2</a>
+            </div>
+            <div style="align-self: center" class="name">
+                <a href="#" style="font-size:20px ;width: initial" class="container">NAME2</a>
+            </div>
+            <div class="row-con">
+                <a  class="btn btn-sm btn-outline-info" href="https://www.facebook.com/" role="button"  ><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a  class="btn btn-sm btn-outline-danger" href="https://www.youtube.com/" role="button" style="margin-left: 30px"><i class="fab fa-youtube fa-2x"></i></a>
+                <a  class="btn btn-sm btn-outline-primary" href="https://twitter.com/" role="button" style="margin-left: 30px"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
 </html>

@@ -49,7 +49,7 @@ function change(){
     times=times+1;
   }
 };
-function changeG() {
+function changeGa() {
   var a=document.getElementById('G1');
   a.style.opacity="1";
   a.style.transition="opacity 2s";
@@ -57,7 +57,7 @@ function changeG() {
   a.style.opacity="1";
   a.style.transition="opacity 2s";
 }
-function changeG1() {
+function changeG1a() {
   var a=document.getElementById('G1');
   a.style.opacity="0";
   a.style.transition="opacity 2s";
@@ -103,13 +103,9 @@ function opacityC() {
     pic[c].style.opacity="0.5";
     pic[c].style.transition="opacity 1s";
   }
-    if (i in time==false) {
       blank_h.style.display="block";
       black_h.style.display='none';
-    } else {
-      black_h.style.display="block";
-      blank_h.style.display="none";
-}
+
 }
 //not hover
 function opacityD() {
@@ -132,25 +128,25 @@ function changeG1() {
     black_h.style.display="none";
     blank_h.style.display="block";
     var index=time.indexOf(i);
-    if (index>-1){
+    if (index!=-1){
       time.splice(index,1);
     }
     //show blank graphic
     //remove pic from time array
 } 
-function changeG() {
+//click on heart 1
+function changeG() {//SELECTED
   var blank_h=document.getElementById('heart');
   var black_h=document.getElementById('heart1');
-    blank_h.style.display="none";
-    black_h.style.display="block";
-    var index=time.indexOf(i);
-    if (index==-1){
-    time.push(i);}
-
+  blank_h.style.display="none";
+  black_h.style.display="block";
+  var index=time.indexOf(i);
+  if (index==-1){
+    time[time.length]=i;
+  }
     //show black graphic
     //add pic to time array
-  }
-
+}
 //slide to the right
 function slideR() {
   var pic=document.getElementsByClassName('slide');
@@ -170,9 +166,51 @@ function slideL() {
     heart_times=2;//reset heart_times
     i--;
   } 
-
 }
-function show_ht() {
-  alert(time);
-  alert(i);
+function show_top() {
+  for (k=0; k<time.length; k++) {
+    if (time[k]==0) {
+      england_r++;
+    } else if (time[k]==1) {
+      russia_r++;
+    } else if (time[k]==2) {
+      tokyo_r++
+    } else if (time[k]==3){
+      newYork_r++;
+    } else if (time[k]==4) {
+      hanoi_r++;
+    } else if (time[k]==5) {
+      france_r++;
+    }
+  }
+  for (h=0; h<max.length; h++) {
+    max[h]=ratings[1];
+    for (k=0; k<ratings.length; k++) {
+      if (max[h]<ratings[k] && ratings[k]!=max[h-1]) {
+        max[h]=ratings[k];
+      }
+  }
+}
+  for (h=0; h<ratings.length; h++) {
+    for (k=0; k<max.length; k++) {
+      if (max[k]==ratings[h]) {
+        if(h==0) {
+          document.getElementById('england').style.display="block";
+        } else if (h==1) {
+          document.getElementById('russia').style.display="block";
+        } else if (h==2) {
+          document.getElementById('tokyo').style.display="block";
+        } else if (h==3) {
+          document.getElementById('new york').style.display="block";
+        } else if (h==4) {
+          document.getElementById('hanoi').style.display="block";
+        } else if (h==5) {
+          document.getElementById('france').style.display="block";
+        }
+      }
+    }
+  }
+}
+function quiz_selection () {
+  
 }
