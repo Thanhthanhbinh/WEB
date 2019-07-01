@@ -8,20 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fugaz+One|Grand+Hotel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Lobster|Maven+Pro&display=swap" rel="stylesheet">
+        
         <title>Mainpage</title>
         <script src="re.js"></script>
-        <script>
-          var arr=[];
-          var test=0;
-          var once=0;
-          var inp="";
-          var inp1="";
-          var bb="";
-          var btn=document.getElementById('review');
-          var times=0;
-        </script>
     </head>
-    <body>
+    <body onload="load_top()">
         <!--LOGO VA TÊN TRANG WEB-->
         <div class="navigation" >
           <div style="float: left;justify-items: center;">
@@ -138,7 +129,7 @@
                         </div>
                   </div>
                   <div class="carousel-item" data-interval="2000">
-                      <img src="http://neotokyo2099.com/wp-content/uploads/2019/05/cropped-harajuku.jpg" class="d-block w-100"  alt="...">
+                      <img src="cropped-harajuku.jpg" class="d-block w-100"  alt="...">
                       <div class="flex-container">
                               <a role="button" class="btn btn-outline-light btn-block" href="https://www.google.com/search?q=Tokyo&oq=to&aqs=chrome.0.69i59j69i61l3j69i57j69i59.1379j0j7&sourceid=chrome&ie=UTF-8">TOKYO</a>
                       </div>
@@ -167,12 +158,13 @@
                         <hr>
                         <p class="lead">Qua vài câu hỏi, chúng tôi có thể giúp bạn tìm được địa điểm để tới thăm trong mùa lễ hội tới!</p>
                         <p style="font-size: 20px">Để làm quiz, hãy CLICK chuột vào nút dưới đây.</p>
-                        <a class="btn btn-outline-dark btn-lg" id="alert" href="Result.html" role="button"><i class="fas fa-file-alt"></i> TAKE QUIZ</a>
+                        <a class="btn btn-outline-dark btn-lg" id="alert" href="Quiz - Copy.html" role="button"><i class="fas fa-file-alt"></i> TAKE QUIZ</a>
                       </div>
+                      <p style="text-align: center;" class="Heading" id="top_1"><i class="fas fa-star"></i> !REVIEW! <i class="fas fa-star"></i></p>
                 <!--NGĂN CÁCH CHO THOÁNG-->
-                    <p style="text-align: center" class="Heading"><i class="fas fa-crown"></i> !TOP RESULTS! <i class="fas fa-crown"></i></p>
+                    <p style="text-align: center;display: none" class="Heading" id="top"><i class="fas fa-crown"></i> !YOUR CHOICE! <i class="fas fa-crown"></i></p>
                 <!--NHỮNG NƯỚC NỔI TIẾNG ĐƯỢC LỰA CHON-->
-                <div class="card-group" style="margin-left:30px; margin-right:30px; margin-bottom: 20px">
+                <div class="card-group" style="margin-left:30px; margin-right:30px; margin-bottom: 20px" >
                   <div class="card"style="display: none" id="england">
                     <img src="https://cdn.tourradar.com/s3/tour/original/139971_da553565.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -204,7 +196,7 @@
                     </div>
                   </div>
                   <div class="card"style="display: none" id="tokyo">
-                    <img src="http://neotokyo2099.com/wp-content/uploads/2019/05/cropped-harajuku.jpg" class="card-img-top" alt="...">
+                    <img src="cropped-harajuku.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Tokyo</h5>
                     </div>
@@ -223,6 +215,8 @@
                   </div>
                 </div>
                 <!--REVIEW-->
+                <p style="text-align: center;" class="Heading" id="top_1"><i class="fas fa-star"></i> !REVIEW! <i class="fas fa-star"></i></p>
+
     <div id="block">
 <button type="button" id="review" onclick="change()" class="btn btn-outline-dark btn-block" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-chevron-down"></i></button>
     <div class="txt-con" >
@@ -245,8 +239,27 @@
 </div>
 </div>
     </div>
+    <!--SHOW COMMENT-->
 <p class="Heading" style="text-align: center; display:none;" id="block-show">!THANK YOU!</p>
-
+<button type="radio" class="btn btn-light btn-block" onclick="quiz_selection()"  >COMMENTS</button>
+<div style="display: flex; flex-direction:column; flex-flow:wrap; justify-content:center">
+  <div style="display: flex; flex-direction:column; flex-flow:wrap; justify-content:center">
+    <h1 class="comment_d Heading"></h1>
+    <p class="name_d SHeading"></p>
+  </div>
+  <div style="display: flex; flex-direction:column; flex-flow:wrap; justify-content:center">
+    <h1 class="comment_d Heading"></h1>
+    <p class="name_d SHeading"></p>
+  </div>
+  <div style="display: flex; flex-direction:column; flex-flow:wrap; justify-content:center">
+    <h1 class="comment_d Heading"></h1>
+    <p class="name_d SHeading"></p>
+  </div>
+  <div style="display: flex; flex-direction:column; flex-flow:wrap; justify-content:center">
+    <h1 class="comment_d Heading"></h1>
+    <p class="name_d SHeading"></p>
+  </div>
+</div>
     <!--JS-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

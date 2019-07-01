@@ -9,25 +9,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <title>Quiz</title>
         <script src="re.js"></script>
-        <script>
-            var arr=[];
-            var test=0;
-            var once=0;
-            var inp="";
-            var inp1="";
-            var bb="";
-            var btn=document.getElementById('review');
-            var times=0;
-            var time=[];
-            var i=0;
-            var heart_times=2;
-            var england_r=0;
-            var russia_r=0;
-            var newYork_r=0;
-            var tokyo_r=0;
-            var hanoi_r=0;
-            var france_r=0;
-            var texas_r=0;
+        <script> 
+        var ratings=[0,0,0,0,0,0];
+        var time=[];
+ var i=0;
+ var heart_times=2;
         </script>
     </head>
     <body>
@@ -53,33 +39,33 @@
                 <header class="SHeading" style="margin-left: 30px">How long are you expected to travel?</header>
             </div>
             <div class="row-con" style="background-color: whitesmoke;">
-                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> LONG </button>
-                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> MEDIUM </button>
-                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> SHORT </button>
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px" onclick="d_long()"> LONG </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px" onclick="d_med()"> MEDIUM </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px" onclick="d_short()"> SHORT </button>
             </div>
             <header class="Heading" style="font-size: 50px;display:flex;align-content: flex-start; flex-direction:column; margin-left: 5px;display: inline-block; ">SECOND QUESTION: <i class="fas fa-comment-dollar"></i></header>
             <div class="flex-container">
                 <header class="SHeading" style="margin-left: 30px">How much are you expected to spend?</header>
             </div>
             <div class="row-con" style="background-color: whitesmoke;">
-                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> VERY MUCH </button>
-                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> MEDIUM </button>
-                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> VERY LITTLE </button>
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px" onclick="m_long()"> VERY MUCH </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px" onclick="m_med()"> MEDIUM </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px" onclick="m_short()"> VERY LITTLE </button>
             </div>
             <header class="Heading" style="font-size: 50px;display:flex;align-content: flex-start; flex-direction:column; margin-left: 5px;display: inline-block ">THIRD QUESTION: <i class="fas fa-users"></i></header>
             <div class="flex-container">
                 <header class="SHeading" style="margin-left: 30px">How many people are you expected to travel with?</header>
             </div>
             <div class="row-con" style="background-color: whitesmoke;">
-                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px"> MANY PALS </button>
-                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px"> A FEW </button>
-                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px"> ONLY ME </button>
+                <button type="radio" class="btn btn-outline-success" style="margin-left: 30px" onclick="p_long()"> MANY PALS </button>
+                <button type="radio" class="btn btn-outline-warning" style="margin-left: 30px" onclick="p_med()"> A FEW </button>
+                <button type="radio" class="btn btn-outline-danger" style="margin-left: 30px" onclick="p_short()"> ONLY ME </button>
             </div>
-            <a role="button" class="btn btn-light row-con" href="Result.html" > SUMMIT </a>
+            <a role="button" class="btn btn-light row-con" href="Result.html" onclick="quiz_re()" > SUMMIT </a>
         </div>
         <!--CACH RA CHO THOANG-->
         <div class="container">
-            <p style="text-align: center; font-size: 80px;" class="Heading" style="display:flex; flex-direction: row"><i class="fas fa-eye"></i> ?ANY SPECULATION? <i class="fas fa-eye"></i></p>
+            <p style="text-align: center; font-size: 80px;" class="Heading" style="display:flex; flex-direction: row"><i class="fab fa-gratipay"></i> ?ANY PERFERENCES? <i class="fab fa-gratipay"></i></p>
         </div>
         <!--DISPLAY ẢNH-->
         <div class="slider" style="display: flex; justify-content:center;">

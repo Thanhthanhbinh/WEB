@@ -1,4 +1,24 @@
 
+
+var arr=[];
+var test=0;
+var once=0;
+var inp="";
+var inp1="";
+var bb="";
+var btn=document.getElementById('review');
+var times=0;
+var ii=0;
+var pressed=0;
+var pressed1=0;
+var pressed2=0;
+
+
+var japan=[0,0,0];
+var london=[0,0,0];
+var new_y=[0,0,0];
+
+
 function add1(){
   inp=document.getElementById("Name").value;
   test=test+2;
@@ -20,6 +40,7 @@ function ok(){
   rate="OK";
   once=1;
 }; 
+//luu du lieu
 function confirm(){
   if(test==3 && once==1){
   alert("INFORMATION RECIEVED");
@@ -33,8 +54,9 @@ function confirm(){
     comment:inp1,
     rate:rate,
   };
+  var arr= JSON.parse(localStorage.getItem("comments"));
   arr.push(obj);
-  
+  window.localStorage.setItem("comments",JSON.stringify(arr));
 }else{
   alert("NO INFROMATION");
 };
@@ -131,7 +153,10 @@ function changeG1() {
     var index=time.indexOf(i);
     if (index!=-1){
       time.splice(index,1);
+      ratings[i]--;
     }
+    window.localStorage.setItem("ratings",JSON.stringify(ratings));
+    window.localStorage.setItem("times",JSON.stringify(time));
     //show blank graphic
     //remove pic from time array
 } 
@@ -144,7 +169,12 @@ function changeG() {//SELECTED
   var index=time.indexOf(i);
   if (index==-1){
     time[time.length]=i;
+    ratings[i]++;
   }
+  window.localStorage.setItem("times",JSON.stringify(time));
+  window.localStorage.setItem("ratings",JSON.stringify(ratings));
+
+
     //show black graphic
     //add pic to time array
 }
@@ -168,50 +198,185 @@ function slideL() {
     i--;
   } 
 }
-function show_top() {
-  for (k=0; k<time.length; k++) {
-    if (time[k]==0) {
-      england_r++;
-    } else if (time[k]==1) {
-      russia_r++;
-    } else if (time[k]==2) {
-      tokyo_r++
-    } else if (time[k]==3){
-      newYork_r++;
-    } else if (time[k]==4) {
-      hanoi_r++;
-    } else if (time[k]==5) {
-      france_r++;
+function load_top() {
+  var time = JSON.parse(localStorage.getItem("times"));
+  for (k=0; k<time.length; k++){
+    switch (time[k]) {
+      case 0:
+        document.getElementById('england').style.display="block";
+        document.getElementById('top').style.display="block";
+
+
+        break;
+        case 1:
+          document.getElementById('russia').style.display="block";
+          document.getElementById('top').style.display="block";
+
+
+          break;
+          case 2:
+            document.getElementById('tokyo').style.display="block";
+            document.getElementById('top').style.display="block";
+
+
+            break;
+            case 3:
+              document.getElementById('new york').style.display="block";
+              document.getElementById('top').style.display="block";
+
+
+              break;
+              case 4:
+        document.getElementById('hanoi').style.display="block";
+        document.getElementById('top').style.display="block";
+
+
+        break;
+        case 5:
+        document.getElementById('france').style.display="block";
+        document.getElementById('top').style.display="block";
+
+
+        break;
     }
   }
-  for (h=0; h<max.length; h++) {
-    max[h]=ratings[1];
-    for (k=0; k<ratings.length; k++) {
-      if (max[h]<ratings[k] && ratings[k]!=max[h-1]) {
-        max[h]=ratings[k];
-      }
+}
+//show comment
+function quiz_selection () {
+  var number=0;
+  var name_l=document.getElementsByClassName('name_d');
+  var comment_l=document.getElementsByClassName('comment_d');
+  var arr_new = JSON.parse(localStorage.getItem("comments"));
+  for (k=0; k<4; k++) {
+    var name=arr_new[k].name;
+    var comment=arr_new[k].comment;
+    name_l[number].innerHTML=name;
+    comment_l[number].innerHTML=comment;
+    number++;
   }
 }
-  for (h=0; h<ratings.length; h++) {
-    for (k=0; k<max.length; k++) {
-      if (max[k]==ratings[h]) {
-        if(h==0) {
-          document.getElementById('england').style.display="block";
-        } else if (h==1) {
-          document.getElementById('russia').style.display="block";
-        } else if (h==2) {
-          document.getElementById('tokyo').style.display="block";
-        } else if (h==3) {
-          document.getElementById('new york').style.display="block";
-        } else if (h==4) {
-          document.getElementById('hanoi').style.display="block";
-        } else if (h==5) {
-          document.getElementById('france').style.display="block";
+//day
+function d_long() {
+  japan[0]=1;
+  pressed++;
+}
+function d_short () {
+  new_y[0]=1;
+  pressed++;
+
+}
+function d_med() {
+  london[0]=1;
+  pressed++;
+
+}
+//money
+function m_med() {
+  london[1]=1;
+  pressed1++;
+
+}
+function m_long() {
+  japan[1]=1;
+  pressed1++;
+
+}
+function m_short () {
+  new_y[1]=1;
+  pressed1++;
+
+}
+//people
+function p_long() {
+  london[2]=1;
+  pressed2++;
+
+}
+function p_med() {
+  japan[2]=1;
+  pressed2++;
+
+}
+function p_short () {
+  new_y[2]=1;
+  pressed2++;
+
+}
+function quiz_re() {
+  if(pressed!=0 &&pressed1!=0){
+    if(pressed2!=0){
+      var tim=[0,0,0];
+      for (k=0;k<3; k++) {
+        if (japan[k]==1){
+          tim[0]++;
+        }
+        if (london[k]==1){
+          tim[1]++;
+        }
+        if (new_y[k]==1){
+          tim[2]++;
         }
       }
+      var ma=tim[0];
+      
+      for (k=0;k<3; k++) {
+        if (ma<tim[k]) {
+          ma=tim[k];
+        }
+      }
+      
+      for (k=0;k<3; k++) {
+        if(ma==tim[k]) {
+          ii=k;
+        }
+      }
+      if(ma==1){
+        ii=3;
+      }
+      window.localStorage.setItem("ii",JSON.stringify(ii));
+      pressed=0;
+      pressed1=0;
+      pressed2=0;
     }
-  }
-}
-function quiz_selection () {
+  } else {
+    alert("QUIZ HAS NOT BEEN DONE");
+    ii=4;
+    window.localStorage.setItem("ii",JSON.stringify(ii));
 
+  }
+  
+}
+function nothing() {
+  time = JSON.parse(localStorage.getItem("times"));
+
+  document.getElementById('tokyo').style.display="none";
+  document.getElementById('england').style.display="none";
+  document.getElementById('new york').style.display="none";
+    document.getElementById('top').style.display="none";
+    document.getElementById('top_1').style.display="block";
+  
+
+
+
+}
+function show_re() {
+  ii = JSON.parse(localStorage.getItem("ii"));
+  switch (ii) {
+    case 0:
+      document.getElementById('tokyo-r').style.display="block";
+      break;
+      case 1:
+        document.getElementById('england-r').style.display="block";
+        break;
+        case 2:
+          document.getElementById('new york-r').style.display="block";
+          break;
+          case 3:
+              document.getElementById('hanoi-r').style.display="block";
+              case 4:
+                  document.getElementById('home-r').style.display="block";
+
+                
+
+  }
 }
