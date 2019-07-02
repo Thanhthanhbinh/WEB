@@ -12,8 +12,7 @@ var ii=0;
 var pressed=0;
 var pressed1=0;
 var pressed2=0;
-
-
+var tt=0;
 var japan=[0,0,0];
 var london=[0,0,0];
 var new_y=[0,0,0];
